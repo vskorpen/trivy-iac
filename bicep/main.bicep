@@ -23,12 +23,15 @@ var variablesymbolicName = 'someString'
 
 module storageAccount 'br/public:avm/res/storage/storage-account:0.27.1' = {
   scope: resourceGroup('test-rg')
+  name: 'bullcrap1'
   params: {
     // Required parameters
     name: 'ssablob001'
     // Non-required parameters
     kind: 'BlobStorage'
     skuName: 'Standard_LRS'
+    publicNetworkAccess: 'Enabled'
+    allowBlobPublicAccess: true
   }
 }
 

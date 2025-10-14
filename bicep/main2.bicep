@@ -66,7 +66,7 @@ module virtualMachine 'br/public:avm/res/compute/virtual-machine:0.20.0' = {
     osType: 'Linux'
     vmSize: 'Standard_D2s_v3'
     // Non-required parameters
-    disablePasswordAuthentication: true
+    disablePasswordAuthentication: false
     location: '<location>'
     publicKeys: [
       {
