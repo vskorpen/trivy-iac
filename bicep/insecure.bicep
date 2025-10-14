@@ -7,7 +7,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
   kind: 'StorageV2'
   properties: {
     allowBlobPublicAccess: true
-    minimumTlsVersion: 'TLS1_0'  // This yields an error, if insecure.bicep is built directly
+    minimumTlsVersion: 'TLS1_2'
     supportsHttpsTrafficOnly: false
     accessTier: 'Hot'
   }
