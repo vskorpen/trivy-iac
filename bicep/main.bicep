@@ -31,3 +31,10 @@ module storageAccount 'br/public:avm/res/storage/storage-account:0.27.1' = {
     skuName: 'Standard_LRS'
   }
 }
+
+module testModule 'modules/module.bicep' = {
+  name: 'testModuleDeployment'
+  params: {
+    location: 'northeurope'
+  }
+}

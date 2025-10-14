@@ -42,7 +42,8 @@ jobs:
           persist-credentials: false
 
       - name: Build Bicep
-        run: az bicep build --file ./bicep/main.bicep
+        # Builds all Bicep files to ARM JSON templates so that Trivy can scan them.
+        run: for f in `find . -type f -name "*.bicep"`; do az bicep build -f "$f"; done 
 
       # Initializes Trivy for Bicep IaC scanning.
       - name: Run Trivy vulnerability Scanner
